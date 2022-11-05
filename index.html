@@ -30,10 +30,7 @@
 
           // document.getElementById('output').innerHTML=grade
 
-          if (grade<0){
-            document.getElementById('output').innerHTML='Grade cannot be neative (Invalid)'
-          }
-
+          
           if(grade>100){
             document.getElementById('output').innerHTML='Invalid grade'
           }else if(grade>=80 && grade<=100){
@@ -44,8 +41,11 @@
             document.getElementById('output').innerHTML='Your grade: B'
           }else if(grade>=50 && grade<=59){
             document.getElementById('output').innerHTML='Your grade: C'
-          }else {
+          }else if(grade>0 &&grade<=49) {
             document.getElementById('output').innerHTML='Your grade: Fail'
+          }else{
+            document.getElementById('output').innerHTML='Grade cannot be neative (Invalid)'
+          
           }
           document.getElementById('inputgrade').value=''
           
